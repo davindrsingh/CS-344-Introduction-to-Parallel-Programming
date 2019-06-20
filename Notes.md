@@ -37,6 +37,47 @@ Use Reduce to add these local histograms.
 Can be used to make histogram.
 
 
+# Optimizing GPU Programs
+Goal - solve problem faster
+       solve bigger problems
+       solve more problems
+
+Principles efficient GPU program - 
+1. Decrease time spent on memory operations.
+2. Coalesce global memory accesses.
+3. Avoid thread divergence. (different threads reach at milestone at different time)(we used barriers for this)
+
+Levels of Optimization
+1. Algorithms
+2. Basic principles
+3. Architecture Specific
+4. mu-optimization at instruction level
+
+Pick Algorithms which are fundamentally parallel.
+mergesort (nlogn) - much better choice
+insertion sort (n^2)
+heapsort (nlogn) - update shared variable (hard to parallelize)
+
+APOD 
+![alt text](/src/apod.PNG)
+Analyze - Profile whole application 
+Parallelize - Pick an approach (libraries, directives)
+              Pick an algorithm (fundamentally parallel)
+Optimize - Profile-drive optimaztion
+Deploy - make it real
+
+**Weak Scaling** - Run a larger problem or more
+**Strong Scaling** - Run a problem faster
+
+# Parallel Computing Patterns
+
+Some Problems - 
+1. Dense N-Body
+There are N bodies. Each body exerts a force on each other oject.
+  All-Pairs N-Body - Calculate force between each pair of bodies and add them together.
+  N^2 Complexity.
+ 
+
 What is Compact?
 We want the output of a compact operation to be dense.
 is Diamonds - 
