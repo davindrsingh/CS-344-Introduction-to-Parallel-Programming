@@ -25,6 +25,7 @@ steps - log(n)
 ![alt text](/src/Bscan.PNG)
 work/time - n
 steps - 2log(n)
+Exclusive Scan give scatter addresses.
 
 **Histograms**
 Calculating CDF -> Use Exclusive Scan
@@ -76,7 +77,29 @@ Some Problems -
 There are N bodies. Each body exerts a force on each other oject.
   All-Pairs N-Body - Calculate force between each pair of bodies and add them together.
   N^2 Complexity.
- 
+
+2. SmPv (Sparse Matrix Vector Multiplication)
+Sparse Matrices are represented as Compressed Sparse Row.
+Three Vectors represent entire matrix
+Value Vector - Consiste of values
+Column Vector - Column of those values
+Row Vector - Rows of those values
+![alt text](/src/smpv.PNG)
+
+**SORT**
+Odd-Even Sort (Brick Sort)
+![alt text](/src/odd.PNG)
+
+Merge Sort
+Parallel Merge - 
+![alt text](/src/merge.PNG)
+One big merge - Lots of SMS remain idle.
+Take one big problem and divide into smaller problems.
+
+Radix Sort
+(Most Efficient Parallel Sorting Algorithm)
+
+
 
 What is Compact?
 We want the output of a compact operation to be dense.
@@ -86,6 +109,7 @@ Compact - select 13 diamonds and then apply cc - only 13 threads.
 When to use compact - 
 Is useful when we need to compact away (delete) large number of elements and computation on each surviving element is very expensive.
 
+Try to convert communication between threads to communication within a thread.
 Core Algorithm - 
 Set of predicates - 
 scatter addrases
