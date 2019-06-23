@@ -39,8 +39,8 @@ Member function that can be redefined in a derived class.
 Non-virtual members can also be redefined in derived classes, but non-virtual members of derived classes cannot be accessed through a reference of the base class.
 *Abstract Base Class*
 They are classes that can only be used as base classes, and thus are allowed to have virtual member functions without definition. It can not be instantiated
-Sytax - 
-*virtual int area()=0;* - Pure Virtual Function
+Snytax - 
+```virtual int area()=0; - Pure Virtual Function```
 The classes that contain atleas one pure virtual function are called abstract base class.
 Abstract base classes cannot be used to instantiate objects.
 
@@ -51,16 +51,17 @@ Making base class destructor virtual guarantees that the object of derived class
 
 *Function Pointers*
 Pointer - Variable that holds address of anothre variable.
-Fnc Ptrs - Point to functions.
+Fnc Ptrs - Point to functions. 
 Syntax - 
 Pointer to a function that takes no arguments and returns an int
-int (*fcnPtr)(); //brackets around fcnPtr are very important
-int (*const fcnPtr)(); //const function pointer
+```int (*fcnPtr)(); //brackets around fcnPtr are very important```
+```int (*const fcnPtr)(); //const function pointer```
+
 Assignment-
-int (*fcnPtr)() = foo;*
-Calling A function through a pointer
-(*fcnPtr)(5);*
-*fcnPtr(5)* - Implicit dereference method
+```int (*fcnPtr)() = foo;*```
+Calling A function through a pointer 
+```(*fcnPtr)(5);*``` 
+```*fcnPtr(5)* - Implicit dereference method``` 
 Default parameters wont work.
 Default parameres are resolved at compile time whereas function parameters are resolved at runtime.
 Functions used as arguments to another function are sometimes called **callback functions**.
