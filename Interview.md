@@ -8,18 +8,18 @@ Inline call is a request to compiler. The compiler may ignore it.
 All the functions defined inside class definition are by default inline, but you can also make any non-class function inline by using keyword inline with them.
 It is adviced to define large functions outside the class definition using scope resolution :: operator, because if we define such functions inside class definition, then they become inline automatically.
 
-Constructor - Class()
-Destructor - ~Class()
+Constructor - ```Class()```
+Destructor - ```~Class()```
 
 Static Functions - These functions cannot access ordinary data members and member functions, but only static data members and static member functions can be called inside them.
 Constant - such member functions can never modify the object or its related data members.
 Friend Function-
 Syntax 
-
+```
 friend void foo();
 friend void otherclass::foo();
 firend otherclass;
-
+```
 Friend Functions is a reason, why C++ is not called as a pure Object Oriented language. Because it violates the concept of Encapsulation.
 
 **Inheritence - **
@@ -55,7 +55,7 @@ Fnc Ptrs - Point to functions.
 Syntax - 
 Pointer to a function that takes no arguments and returns an int
 int (*fcnPtr)(); //brackets around fcnPtr are very important
-int (*const fcnPtr)(); //const function pointer*
+int (*const fcnPtr)(); //const function pointer
 Assignment-
 int (*fcnPtr)() = foo;*
 Calling A function through a pointer
@@ -70,7 +70,7 @@ Uses -
 3. A virtual table contains one entry for each virtual function that can be called by objects of the class. Each entry in this table is simply a function pointer that points to the most-derived function accessible by that class.
 **Function Templates**
 Write functions that can be used with generic types.This allows us to create a function template whose functionality can be adapted to more than one type or class without repeating the entire code for each type.
-
+```
 template <class T>
 T GetMax (T a, T b) {
   T result;
@@ -82,9 +82,9 @@ template <class T, class U>
 T GetMin (T a, U b) {
   return (a<b?a:b);
 }
-
+```
 **Class Templates**
-template <class T>
+```template <class T>
 class mypair {
     T a, b;
   public:
@@ -100,7 +100,7 @@ T mypair<T>::getmax ()A static global variable is visible only in the file it is
   retval = a>b? a : b;
   return retval;
 }
-  
+  ```
 **Storage Classes**
  A variable’s storage class gives information about the storage location of variable in memory, default initial value, scope of the variable and it’s lifetime.
 Storage class specifiers supported in C++ are auto, register, static, extern and mutable.
