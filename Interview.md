@@ -107,3 +107,9 @@ T mypair<T>::getmax ()A static global variable is visible only in the file it is
 Storage class specifiers supported in C++ are auto, register, static, extern and mutable.
 A static global variable is visible only in the file it is declared but an extern global variable is visible across all the files of a program.
 If a data member of a class is declared as *mutable*, then it can be modified by an object which is declared as constant. 
+
+
+PYTHON -- 
+
+Inner Class - Classes defined inside another class.
+Advantage - Apart from more readable/manageable code, If a class is useful to only one other class then it is logical to embed it in that class and keep the two together. 
